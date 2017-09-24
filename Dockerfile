@@ -15,5 +15,5 @@ RUN apt-get update && \
 VOLUME /var/lib/docker	 
 RUN wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
 RUN tar -C /usr/local -xf go1.8.3.linux-amd64.tar.gz
-
+ADD ./k8s-compile.sh /k8s-compile.sh
 CMD /k8s-compile.sh
